@@ -59,8 +59,8 @@ function battle(orcHitPoints, humanHitPoints) {
     for (var x = 0; y <= orcHitPoints && y <= humanHitPoints; x += 10) {
         var orcDamage = getRandomNumber(23, 35);
         var humanDamage = getRandomNumber(18, 27);
-        humanHitPoints = humanHitPoints - orcDamage - humanArmor;
-        orcHitPoints = orcHitPoints - humanDamage - orcArmor;
+        humanHitPoints = humanHitPoints - (orcDamage - humanArmor);
+        orcHitPoints = orcHitPoints - (humanDamage - orcArmor);
    }
     if (humanHitPoints <= 0) {
         console.log('Orc wins');
