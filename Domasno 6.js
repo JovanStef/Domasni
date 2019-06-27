@@ -15,7 +15,7 @@ function flirt(numberOfHits, boyDeducts) {
     var girlHits = numberOfHits;
     for (var x = 0; x < numberOfHits; x++) {
         girlHits++;
-        if (x % 10 === 0 && boyDeducts > 0) {
+        if (x % 10 === 0) {
             girlHits -= boyDeducts;
         }
         else if (x % 5 === 0) {
